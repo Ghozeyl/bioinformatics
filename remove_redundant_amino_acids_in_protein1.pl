@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+#another solution for remove the redundant amino acids in the protein
+@newprotein;
+$q=0;
+$d=0;
+$protein1 ="PIATPEVYAEMLGQAKQNSYAFPAINCTSSETVNAAIKGFADAGSDGIIQFSTGGAEFGSGLGVKDMVTGAVALAEFTHVIAAKYPVNVALHTDHCPKDKLDSYVRPLLAISAQRVSKGGNPLFQSHMWDGSAVPIDENLAIAQELLKAAAAAKIILEIEIGVVGGKLYTSPEDFEKTIEALGAGEHGKYLLAATFGNVHGVYKPGNVKLRPDILAQGQQVAAAKLGLPADAKPFDFVFHGGSGSLKEIEEALRYGVVKMNVDTDTQYAFTRPIAGHMFTNYDGVLKVDGEVGVKKVYDPRSYLKKAEASMSQRVVQACNDLHCAGKSLTHH";
+(@proteins1)=split (//,$protein1);
+foreach $l (@proteins1){
+$num=substr($protein1,$d, 2);
+if ($num ne "$l$l"){
+ $newprotein[$q]=$l;
+ $q++;}
+ $d++;
+ }
+ print "\n*********\n@newprotein\n********************\n";
+ exit;
